@@ -20,4 +20,4 @@ services:
     depends_on:
       - redis
     ports:
-      - "8000:3666"
+      - "3253:3666"
