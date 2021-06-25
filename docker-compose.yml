@@ -9,7 +9,7 @@ services:
     ports:
       - "6389:6379"
     expose:
-      - "6389:6379"
+      - "6389"
   web:
     build:
       context: .
