@@ -5,7 +5,7 @@ volumes:
 
 services:
   redis:
-    image: redis:5-alpine
+    image: redis:alpine
     ports:
       - "6389:6379"
 
