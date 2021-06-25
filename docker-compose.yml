@@ -7,7 +7,7 @@ services:
   redis:
     image: redis:5-alpine
     ports:
-      - "6389:6389"
+      - "6389:6379"
 
   web:
     build:
