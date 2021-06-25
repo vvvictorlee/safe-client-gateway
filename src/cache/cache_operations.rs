@@ -95,7 +95,7 @@ impl Invalidate {
         }
     }
 
-    fn database(&mut self, database: Database) -> &mut Self {
+    pub fn database(&mut self, database: Database) -> &mut Self {
         self.database = database;
         self
     }
@@ -109,7 +109,7 @@ pub struct CacheResponse<'a, R>
 where
     R: Serialize,
 {
-    database: Database,
+    pub database: Database,
     pub key: String,
     pub duration: usize,
     // "dyn" allows setting the type of the BoxFuture to different times in runtime
@@ -158,7 +158,7 @@ where
 }
 
 pub struct RequestCached {
-    database: Database,
+    pub database: Database,
     pub url: String,
     pub request_timeout: u64,
     pub cache_duration: usize,
