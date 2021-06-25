@@ -13,10 +13,12 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    links:
+      - redis # links this container to "redis" container
     env_file:
       - .env
     environment:
-      - REDIS_URL="redis://redis:6389/0"
+      - REDIS_URL="redis://redis:6389"
     depends_on:
       - redis
     ports:
